@@ -50,7 +50,6 @@ It also ensures key scripts are marked as executable.
 
 ## 🔧 Keybindings Example (Hyprland)
 
-To toggle fullscreen for the current window:
 ```ini
 Window button + f = fullscreen
 Window button + q = terminal
