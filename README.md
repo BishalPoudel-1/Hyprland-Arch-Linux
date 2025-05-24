@@ -1,10 +1,8 @@
-# Hyprland-Arch-Linux
-# Hyprland Setup Script
+# Hyprland Waybar in Arch linux Setup Script
 
 This script automates the installation and setup of the Hyprland Wayland compositor along with a collection of essential applications and configurations to get you started with a functional, stylish Linux desktop environment.
 
 > ⚠️ **Warning:** This script is intended to be run on a fresh Arch-based system. It assumes you have `yay` (AUR helper) installed. There is no error checking. Proceed with caution.
-
 ---
 
 ## 🚀 Features
@@ -54,4 +52,8 @@ It also ensures key scripts are marked as executable.
 
 To toggle fullscreen for the current window:
 ```ini
-bind = SUPER, F, fullscreen
+Window button + f = fullscreen
+Window button + q = terminal
+Window button + shift + x = close app
+
+Brightness control is based on the gpu so this script is for amd but you can change it .
