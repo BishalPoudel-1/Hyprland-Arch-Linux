@@ -1,2 +1,57 @@
 # Hyprland-Arch-Linux
-This is the script to install the hyprland with minimial and nice looking things.
+# Hyprland Setup Script
+
+This script automates the installation and setup of the Hyprland Wayland compositor along with a collection of essential applications and configurations to get you started with a functional, stylish Linux desktop environment.
+
+> ⚠️ **Warning:** This script is intended to be run on a fresh Arch-based system. It assumes you have `yay` (AUR helper) installed. There is no error checking. Proceed with caution.
+
+---
+
+## 🚀 Features
+
+The script will:
+
+- Install **Hyprland** and essential Wayland utilities.
+- Install utilities for system control (Wi-Fi, Bluetooth, volume, brightness, screenshots, etc.).
+- Set up aesthetic components (Dracula theme, icons, nerd fonts).
+- Copy preconfigured configuration files to your `~/.config` directory.
+- Optionally add `fastfetch` and `starship` shell prompt to `.bashrc`.
+- Optionally disable Wi-Fi powersave.
+- Optionally start the Hyprland session.
+
+---
+
+## 📦 Packages Installed
+
+Includes (but not limited to):
+
+- **Core Environment:** `hyprland`, `waybar`, `kitty`, `swaybg`, `xdg-desktop-portal-hyprland`
+- **Lock & Launch:** `swaylock-effects`, `wofi`, `wlogout`
+- **UI & UX Tools:** `mako`, `thunar`, `dracula-gtk-theme`, `dracula-icons-git`
+- **Fonts & Terminal Tools:** `ttf-jetbrains-mono-nerd`, `noto-fonts-emoji`, `starship`, `fastfetch`
+- **System Tools:** `pamixer`, `brightnessctl`, `blueman`, `nm-applet`, `gvfs`, `python-requests`
+- **Screenshot Tools:** `grim`, `slurp`, `swappy`
+- **Other Applications:** `firefox`, `google-chrome`, `code`
+
+---
+
+## 📂 Configuration Files
+
+The script will optionally copy your configuration files to `~/.config`:
+
+- `hypr/`
+- `kitty/`
+- `waybar/`
+- `mako/`
+- `swaylock/`
+- `wofi/`
+
+It also ensures key scripts are marked as executable.
+
+---
+
+## 🔧 Keybindings Example (Hyprland)
+
+To toggle fullscreen for the current window:
+```ini
+bind = SUPER, F, fullscreen
