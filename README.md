@@ -4,6 +4,7 @@ This script automates the installation and setup of the Hyprland Wayland composi
 
 > ⚠️ **Warning:** This script is intended to be run on a fresh Arch-based system. It assumes you have `yay` (AUR helper) installed. There is no error checking. Proceed with caution.
 ---
+Reboot the machine to work properly
 
 ## 🚀 Features
 
