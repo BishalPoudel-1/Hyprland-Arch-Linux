@@ -1,0 +1,214 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 45,
+    "modules-left": [
+        "custom/firefox",
+        "custom/files",
+        "custom/terminal",
+        "custom/chrome",
+        "custom/vscode",
+        "clock",
+        "custom/weather",
+        "wlr/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "network",
+        "bluetooth",
+        "battery",
+        "backlight",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "tray"
+    ],
+    "hyprland/window": {
+        "format": "{}"
+    },
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+    "custom/power_profile": {
+        //shows the current power profile and switches to next on click
+        "exec": "asusctl profile -p | sed s:'Active profile is'::",
+        "interval": 30,
+        "format": "󰈐{}",
+        "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
+        "signal": 8
+    },
+    "custom/weather": {
+        //shows the current weather and forecast
+        "tooltip": true,
+        "format": "{}",
+        "interval": 30,
+        "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type": "json"
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "interval": 1
+    },
+    "memory": {
+        "format": " {used:0.1f}GB"
+    },
+    "custom/firefox": {
+        "format": "\ue658", // Firefox icon from Nerd Font
+        "tooltip": true,
+        "tooltip-format": "Launch Firefox",
+        "on-click": "firefox",
+        "interval": 3600 // Not really needed; static icon
+    },
+    "custom/files": {
+        "interval": 3600,
+        "format": "\uf07c",
+        "tooltip": true,
+        "tooltip-format": "Launch thunar",
+        "on-click": "thunar"
+    },
+    "custom/terminal": {
+        "format": "\ue795", // Terminal icon (Nerd Font required)
+        "tooltip": true,
+        "tooltip-format": "Open Terminal",
+        "on-click": "kitty",
+        "interval": 3600
+    },
+    "custom/chrome": {
+        "format": "\uf268", // Chrome icon
+        "tooltip": true,
+        "tooltip-format": "Open Chrome",
+        "on-click": "google-chrome",
+        "interval": 3600
+    },
+    "custom/vscode": {
+        "format": "\ue8da", // VS Code icon (use  or  if not shown properly)
+        "tooltip": true,
+        "tooltip-format": "Open VS Code",
+        "on-click": "code",
+        "interval": 3600
+    },
+    "clock": {
+    "format": "{:%I:%M %p }",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
+    "interval": 60
+},
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "min-length": 6
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        }
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+    "temperature": {
+        "thermal-zone": 1,
+        "format": "{temperatureF}°F ",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C "
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{essid} - {ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
+    },
+    "bluetooth": {
+        "format": " {status}",
+        // an empty format will hide the module
+        "format-connected": " {num_connections}",
+        "tooltip-format": "{device_alias}",
+        "tooltip-format-connected": " {device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+	 "on-click": "bash -c 'bluetoothctl show | grep -q \"Powered: yes\" && bluetoothctl power off > /dev/null 2>&1 || bluetoothctl power on > /dev/null 2>&1'"
+
+    }
+}
