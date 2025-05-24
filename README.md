@@ -1,6 +1,7 @@
 # Hyprland Waybar in Arch linux Setup Script
 
 This script automates the installation and setup of the Hyprland Wayland compositor along with a collection of essential applications and configurations to get you started with a functional, stylish Linux desktop environment.
+You need to have yay.
 
 > ⚠️ **Warning:** This script is intended to be run on a fresh Arch-based system. It assumes you have `yay` (AUR helper) installed. There is no error checking. Proceed with caution.
 ---
