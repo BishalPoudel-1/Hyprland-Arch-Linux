@@ -51,6 +51,7 @@ It also ensures key scripts are marked as executable.
 ## 🔧 Keybindings Example (Hyprland)
 
 ```ini
+Window button + spacebar = app drawer
 Window button + f = fullscreen
 Window button + q = terminal
 Window button + shift + x = close app
