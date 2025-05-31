@@ -112,7 +112,7 @@ if [[ $FAST == "Y" || $FAST == "y" ]]; then
     echo -e "fastfetch added to .bashrc.\n"
 fi
 
-systemctl enable ly.service
+sudo systemctl enable ly.service
 ### Script is done ###
 echo -e "Script had completed.\n"
 echo -e "You can start Hyprland by typing Hyprland (note the capital H).\n"
