@@ -66,7 +66,7 @@ if [[ $INST == "Y" || $INST == "y" ]]; then
     swappy grim slurp pamixer brightnessctl gvfs \
     bluez bluez-utils lxappearance xfce4-settings \
     dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland \
-    nm-applet blueman  firefox code google-chrome fastfetch ly cliphist
+    network-mamager-applet blueman  firefox code google-chrome fastfetch ly cliphist
 
     # Start the bluetooth service
     echo -e "Starting the Bluetooth Service...\n"
@@ -112,7 +112,7 @@ if [[ $FAST == "Y" || $FAST == "y" ]]; then
     echo -e "fastfetch added to .bashrc.\n"
 fi
 
-
+systemctl enable ly.service
 ### Script is done ###
 echo -e "Script had completed.\n"
 echo -e "You can start Hyprland by typing Hyprland (note the capital H).\n"
