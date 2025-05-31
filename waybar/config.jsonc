@@ -15,7 +15,8 @@
         "custom/office",
         "clock",
         "custom/weather",
-        "wlr/workspaces"
+        //"wlr/workspaces"
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "hyprland/window"
@@ -35,29 +36,61 @@
     "hyprland/window": {
         "format": "{}"
     },
-    "wlr/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
+
+  "hyprland/workspaces": {
         "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "default": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "active": "󱓻",
+            "urgent": "󱓻"
+        },
         "persistent_workspaces": {
             "1": [],
             "2": [],
             "3": [],
             "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
+            "5": []
         }
     },
+
+
+/*
+
+    "wlr/workspaces": {
+    "format": "{name}",
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": [],
+        "10": []
+    },
+    "show-only-active": true
+
+},
+*/
     "custom/power_profile": {
         //shows the current power profile and switches to next on click
-        "exec": "asusctl profile -p | sed s:'Active profile is'::",
         "interval": 30,
         "format": "󰈐{}",
-        "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
         "signal": 8
     },
     "custom/weather": {
@@ -78,7 +111,8 @@
         "interval": 1
     },
     "memory": {
-        "format": " {used:0.1f}GB"
+        "format": " {used:0.1f}GB",
+	"interval":1
     },
     "custom/firefox": {
         "format": "\ue658", // Firefox icon from Nerd Font
@@ -148,8 +182,8 @@
             "󰃟",
             "󰃠"
         ],
-        "on-scroll-up": "brightnessctl set 1%+",
-        "on-scroll-down": "brightnessctl set 1%-",
+        "on-scroll-up": "brightnessctl -d amdgpu_bl0 set 1%+",
+        "on-scroll-down": "brightnessctl -d amdgpu_bl0 set 1%-",
         "min-length": 6
     },
     "battery": {
