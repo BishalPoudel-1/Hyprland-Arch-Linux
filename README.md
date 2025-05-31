@@ -6,6 +6,9 @@ You need to have yay.
 > ⚠️ **Warning:** This script is intended to be run on a fresh Arch-based system. It assumes you have `yay` (AUR helper) installed. There is no error checking. Proceed with caution.
 ---
 Reboot the machine to work properly
+## Home page
+![image](https://github.com/user-attachments/assets/52b1b610-036d-419b-aa34-286080efdba8)
+
 
 ## 🚀 Features
 
