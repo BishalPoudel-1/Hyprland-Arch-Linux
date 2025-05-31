@@ -59,6 +59,6 @@ It also ensures key scripts are marked as executable.
 Window button + spacebar = app drawer
 Window button + f = fullscreen
 Window button + q = terminal
-Window button + shift + x = close app
+Window button + x = close app
 
 Brightness control is based on the gpu so this script is for amd but you can change it .
