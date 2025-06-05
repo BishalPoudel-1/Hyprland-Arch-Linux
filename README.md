@@ -15,7 +15,7 @@ Reboot the machine to work properly
 The script will:
 
 - Install **Hyprland** and essential Wayland utilities.
-- Install utilities for system control (Wi-Fi, Bluetooth, volume, brightness, screenshots, etc.).
+- Install utilities for system control (Wi-Fi, Bluetooth, volume, brightness, screenshots, etc.).#Brightness setting need to change based on the cpu and gpu. 
 - Set up aesthetic components (Dracula theme, icons, nerd fonts).
 - Copy preconfigured configuration files to your `~/.config` directory.
 - Optionally add `fastfetch` and `starship` shell prompt to `.bashrc`.
