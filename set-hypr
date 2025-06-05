@@ -44,7 +44,7 @@ else
     exit 
 fi
 
-### Disable wifi powersave mode ###
+### Disable wifi powersave mode ### #also make the wifi stable
 read -n1 -rep 'Would you like to disable wifi powersave? (y,n)' WIFI
 if [[ $WIFI == "Y" || $WIFI == "y" ]]; then
     LOC="/etc/NetworkManager/conf.d/wifi-powersave.conf"
