@@ -7,7 +7,8 @@ You need to have yay.
 ---
 Reboot the machine to work properly
 ## Home page
-![image](https://github.com/user-attachments/assets/52b1b610-036d-419b-aa34-286080efdba8)
+![image](https://github.com/user-attachments/assets/566f4eed-4766-42dd-a1a1-20118b5643c4)
+
 
 
 ## 🚀 Features
