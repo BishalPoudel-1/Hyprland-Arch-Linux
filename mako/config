@@ -1,7 +1,7 @@
 # Mako Notification Daemon Configuration
 # Catppuccin Macchiato Theme
-
 # General Settings
+
 font=JetBrainsMono Nerd Font 10
 width=350
 height=100
@@ -9,7 +9,7 @@ margin=10,10,10
 padding=15
 border-size=2
 border-radius=10
-default-timeout=5000
+default-timeout=2000
 layer=overlay
 anchor=bottom-center
 
@@ -23,7 +23,7 @@ progress-color=over #8aadf4
 # This will inherit from the default style
 [urgency=low]
 border-color=#494d64
-default-timeout=2000
+default-timeout=1500
 
 # Style for Critical Urgency notifications (e.g., power unplugged)
 # This style will make the notification stand out
@@ -31,4 +31,4 @@ default-timeout=2000
 background-color=#1e2030
 text-color=#ed8796
 border-color=#ed8796
-default-timeout=8000
+default-timeout=4000
