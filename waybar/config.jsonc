@@ -14,7 +14,7 @@
         "custom/vscode",
         "custom/office",
         "clock",
-        "custom/weather",
+        //"custom/weather",
         //"wlr/workspaces"
         "hyprland/workspaces"
     ],
