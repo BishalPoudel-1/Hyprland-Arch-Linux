@@ -14,7 +14,7 @@
         "custom/vscode",
         "custom/office",
         "clock",
-        //"custom/weather",
+    
         //"wlr/workspaces"
         "hyprland/workspaces"
     ],
@@ -94,14 +94,7 @@
         "format": "󰈐{}",
         "signal": 8
     },
-    "custom/weather": {
-        //shows the current weather and forecast
-        "tooltip": true,
-        "format": "{}",
-        "interval": 30,
-        "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-        "return-type": "json"
-    },
+
     "tray": {
         "icon-size": 18,
         "spacing": 10
