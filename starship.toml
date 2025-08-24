@@ -6,6 +6,7 @@ $directory\
 [](fg:#769ff0 bg:#394260)\
 $git_branch\
 $git_status\
+$python\
 [](fg:#394260 bg:#212736)\
 $nodejs\
 $rust\
@@ -21,6 +22,11 @@ style = "fg:#e3e5e5 bg:#769ff0"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
+read_only_style = "fg:#e3e5e5 bg:#769ff0" # Style for read-only directories
+# Add file icons using `format = "[ $path$read_only ]($style)"` and the `read_only_style`
+# If you want specific file icons, you'll generally need a separate module or
+# a more complex `format` string with conditional logic, which isn't directly
+# supported by `directory.substitutions` for individual files.
 
 [directory.substitutions]
 "Documents" = " "
@@ -36,6 +42,13 @@ format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
 [git_status]
 style = "bg:#394260"
 format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+
+# New: Python Virtual Environment
+[python]
+symbol = "" # Python symbol
+style = "bg:#394260"
+format = '[[ $symbol ($virtualenv) ](fg:#769ff0 bg:#394260)]($style)'
+detect_extensions = ["py"] # Detects Python projects
 
 [nodejs]
 symbol = ""
@@ -58,8 +71,7 @@ style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [time]
-disabled = true
+disabled = true 
 time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
-
