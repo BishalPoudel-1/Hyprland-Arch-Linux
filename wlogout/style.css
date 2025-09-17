@@ -5,7 +5,8 @@
 }
 
 window {
-    background-color: rgba(4, 3, 10, 0.493); /* lower alpha = stronger blur */
+    background-image: image(url("icons/sunset.png"));
+      background-repeat: no-repeat; 
     
 }
 
