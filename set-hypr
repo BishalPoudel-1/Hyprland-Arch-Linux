@@ -89,10 +89,13 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R waybar ~/.config/
     cp -R swaylock ~/.config/
     cp -R wofi ~/.config/
+    cp -R wlogout ~/.config/
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
     chmod +x ~/.config/waybar/scripts/waybar-wttr.py
+    chmod +x ~/.config/hypr/scripts/notify.sh
+    chmod +x ~/.config/hypr/scripts/power_listener.sh
 fi
 
 ### Install teh starship shell ###
@@ -103,6 +106,7 @@ if [[ $STAR == "Y" || $STAR == "y" ]]; then
     echo -e '\neval "$(starship init bash)"' >> ~/.bashrc
     echo -e "copying starship config file to ~/.confg ...\n"
     cp starship.toml ~/.config/
+    
 fi
 
 ### Add fastfetch to .bashrc ###
