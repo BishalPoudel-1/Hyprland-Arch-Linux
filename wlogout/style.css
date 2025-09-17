@@ -1,0 +1,87 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+window {
+    background-color: rgba(4, 3, 10, 0.493); /* lower alpha = stronger blur */
+    
+}
+
+
+/* General button style */
+button {
+    color: #bfabbb;               /* --foreground */
+    background-color: #1e1c27;    /* --background */
+    border: none;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+
+    font-size: 14px;
+    font-weight: 600;
+
+  animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
+    margin: 0;
+   
+}
+
+
+/* Hover/active effect */
+ button:focus ,button:active, button:hover {
+    background-color: #F2602E; /* --color1 = accent */
+    outline-style: none;
+    background-size: 15%;    /* icon grows on hover */
+}
+
+/* --- Outside rounded corners only --- */
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"));
+    border-radius: 80px 0 0 0;
+    margin : 100px 0px 0px 350px;
+}
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+    border-radius: 0 80px 0 0;
+       margin : 100px 350px 0px 0px;
+  
+}
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+    border-radius: 0 0 80px 0;
+      margin : 0px 350px 100px 0px;
+}
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+    border-radius: 0 0 0 80px;
+    margin : 0px 0px 100px 350px;
+}
+
+button:focus#lock , button:hover#lock {
+  
+    margin : 0px 0px 0px 240px;
+       border-radius: 80px 80px 0px 80px;
+    
+}
+
+button:focus#logout, button:hover#logout {
+  
+    margin : 0px 240px 0px 0px;
+     border-radius: 80px 80px 80px 0px;
+}
+
+button:focus#shutdown , button:hover#shutdown {
+   
+    margin : 0px 240px 0px 0px;
+     border-radius: 0px 80px 80px 80px;
+}
+
+button:focus#reboot ,button:hover#reboot {
+   
+    margin : 0px 0px 0px 240px;
+     border-radius: 80px 0 80px 80px;
+}
+
