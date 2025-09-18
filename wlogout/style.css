@@ -5,16 +5,21 @@
 }
 
 window {
+    /*
     background-image: image(url("icons/sunset.png"));
       background-repeat: no-repeat; 
-    
+    */
+
+    /*--for glass effect--*/
+    background-color: rgba(0,0,0,0.1);
 }
 
 
 /* General button style */
 button {
     color: #bfabbb;               /* --foreground */
-    background-color: #1e1c27;    /* --background */
+   /* background-color: #1e1c27;     --background */
+     background-color: rgba(46,45,45,0.603);
     border: none;
 
     background-repeat: no-repeat;
