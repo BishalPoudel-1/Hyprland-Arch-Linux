@@ -47,7 +47,7 @@ The script will optionally copy your configuration files to `~/.config`:
 - `kitty/`
 - `waybar/`
 - `mako/`
-- `swaylock/`
+- `hyprlock/`
 - `wofi/`
 
 It also ensures key scripts are marked as executable.
