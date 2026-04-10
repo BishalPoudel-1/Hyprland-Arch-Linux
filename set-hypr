@@ -58,6 +58,7 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R wofi ~/.config/
     cp -R wlogout ~/.config/
     cp -R rofi ~/.config/
+    cp -R hyprlock ~/.config/
     
     # Set some files as exacutable 
     chmod +x ~/.config/hypr/xdg-portal-hyprland
