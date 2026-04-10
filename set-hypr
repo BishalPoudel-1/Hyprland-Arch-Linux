@@ -54,7 +54,6 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     cp -R kitty ~/.config/
     cp -R mako ~/.config/
     cp -R waybar ~/.config/
-    cp -R swaylock ~/.config/
     cp -R wofi ~/.config/
     cp -R wlogout ~/.config/
     cp -R rofi ~/.config/
