@@ -85,7 +85,7 @@ if [[ $FAST == "Y" || $FAST == "y" ]]; then
     echo -e "fastfetch added to .bashrc.\n"
 fi
 
-sudo systemctl enable ly.service
+sudo systemctl enable --now ly@tty2.service
 
 ### Script is done ###
 echo -e "Script had completed.\n"
