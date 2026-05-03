@@ -2,24 +2,26 @@
     background-image: none;
     box-shadow: none;
     font-family: "JetBrainsMono Nerd Font", monospace;
+    transition:20ms
 }
 
 window {
-    /*
-    background-image: image(url("icons/sunset.png"));
-      background-repeat: no-repeat; 
-    */
 
-    /*--for glass effect--*/
-    background-color: rgba(0,0,0,0.1);
+background-color: rgba(0, 0, 0, 0.1);
+/* lower alpha = stronger blur */
+    /* background-image: image(url("icons/sunset.png"));
+      background-repeat: no-repeat; 
+*/
+    
 }
 
 
 /* General button style */
 button {
     color: #bfabbb;               /* --foreground */
-   /* background-color: #1e1c27;     --background */
-     background-color: rgba(46,45,45,0.603);
+   /* background-color: #1e1c27; */   /* --background */
+   
+    background-color: rgba(46, 45, 45, 0.603);
     border: none;
 
     background-repeat: no-repeat;
@@ -33,14 +35,16 @@ button {
     transition: all 0.3s cubic-bezier(.55,0.0,.28,1.682);
     margin: 0;
    
+   
 }
 
 
 /* Hover/active effect */
  button:focus ,button:active, button:hover {
-    background-color: #F2602E; /* --color1 = accent */
+   background-color: rgba(0, 0, 0, 0.2); /* --color1 = accent */
     outline-style: none;
     background-size: 15%;    /* icon grows on hover */
+    
 }
 
 /* --- Outside rounded corners only --- */
