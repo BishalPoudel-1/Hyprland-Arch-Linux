@@ -156,7 +156,7 @@
         "format": "\u23fb", // VS Code icon (use  or  if not shown properly)
         "tooltip": true,
         "tooltip-format": "Power Menu",
-        "on-click": "wlogout --protocol layer-shell",
+        "on-click": "wlogout -b 2  --protocol layer-shell",
         "interval": 3600
 
     },
