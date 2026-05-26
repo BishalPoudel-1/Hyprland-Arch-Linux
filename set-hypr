@@ -64,6 +64,8 @@ if [[ $CFG == "Y" || $CFG == "y" ]]; then
     chmod +x ~/.config/waybar/scripts/waybar-wttr.py
     chmod +x ~/.config/hypr/scripts/notify.sh
     chmod +x ~/.config/hypr/scripts/power_listener.sh
+    chmod +x ghostedarch-setting/install.sh
+    (cd ghostedarch-setting && ./install.sh)
 fi
 
 ### Install teh starship shell ###
